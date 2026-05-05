@@ -1,0 +1,42 @@
+:root {
+    --fundo: #0A0A0F;
+    --card-fundo: #12121A;
+    --cor-titulo: #FFFFFF;
+    --esmaecido: #9CA3AF;
+}
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-fluid {
+    background: var(--card-fundo);
+    
+}
+
+.navbar-brand {
+    color: var(--cor-titulo);
+}
+
+
+.flex {
+    display: flex;
+}
+
+.card-dois {
+  margin: 0 auto;
+  width: fit-content;
+  gap: 30px;
+  align-content: center ;
+  
+}
+
+.nav-link{
+    color: white;
+}
+
+
