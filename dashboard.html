@@ -1,107 +1,289 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dashboard</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="dashboard.css">
-</head>
 
-<body>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
 
-    <!--NAV BAR-->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-  <div class="container-fluid">
-    <img src="logo_bitocoin.png>
-    <a class="navbar-brand" href="#">Crypto X</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
+  <body>
+    <!-- NAVEGAÇÃO -->
+    <nav class="navbar mb-2 hstack barra-navegacao">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-5 fs-4 fw-bold" href="#dashboard.html">
+          <img
+            src="img_dashboard/logo_bitocoin.png"
+            alt="Logo"
+            width="50"
+            height="50"
+            class="d-inline-block align-text-middle fs-1"
+          />
+          Crypto
+        </a>
+        <ul class="navbar-nav mb-2 mb-lg-0 ms-auto me-5">
+          <li class="nav-item">
+            <a class="nav-link fw-bold nav-dashboard" href="#">Dashboard</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!--Introdução-->
+    <div class="container container-body">
+    <h6 class="text-intro-bitcoin">BITCOIN</h6>
+    <h4 class="text-desen-bitcoin"><strong>Painel</strong> do Bitcoin</h4>
+
+    <!-- CARDS INFORMAÇÕES -->
+    <div class="d-flex mx-auto mb-4 align-text-baseline">
+      <!-- CARD 1 -->
+       
+      <div class="card mx-4 card-informacoes p-1" style="width: 30%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-currency-dollar"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M4 10.781c.148 1.667 1.513 2.85 3.591 3.003V15h1.043v-1.216c2.27-.179 3.678-1.438 3.678-3.3 0-1.59-.947-2.51-2.956-3.028l-.722-.187V3.467c1.122.11 1.879.714 2.07 1.616h1.47c-.166-1.6-1.54-2.748-3.54-2.875V1H7.591v1.233c-1.939.23-3.27 1.472-3.27 3.156 0 1.454.966 2.483 2.661 2.917l.61.162v4.031c-1.149-.17-1.94-.8-2.131-1.718zm3.391-3.836c-1.043-.263-1.6-.825-1.6-1.616 0-.944.704-1.641 1.8-1.828v3.495l-.2-.05zm1.591 1.872c1.287.323 1.852.859 1.852 1.769 0 1.097-.826 1.828-2.2 1.939V8.73z"
+              />
+            </svg>
+            Preço BTC
+          </p>
+         <p class="card-text card-bitcoin">
+  <span class="fs-2" id="btc-price">Carregando...</span><br />
+  <small id="btc-updated" class="fs-6"></small>
+</p>
+
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card mx-4 card-informacoes p-1" style="width: 30%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-graph-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"
+              />
+            </svg>
+            24 Horas
+          </p>
+          <p class="card-text card-bitcoin">
+          <span class="fs-2">+ 2,37%</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card mx-4 card-informacoes p-1" style="width: 30%">
+        <div class="card-body">
+          <p class="card-title  fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-bar-chart-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1z"
+              />
+            </svg>
+            Quantidade de Bitcoin exitente
+          </p>
+          <p class="card-text fs-2">
+            19,9 milhões
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card mx-4 card-informacoes p-1" style="width: 30%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-globe"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855A8 8 0 0 0 5.145 4H7.5zM4.09 4a9.3 9.3 0 0 1 .64-1.539 7 7 0 0 1 .597-.933A7.03 7.03 0 0 0 2.255 4zm-.582 3.5c.03-.877.138-1.718.312-2.5H1.674a7 7 0 0 0-.656 2.5zM4.847 5a12.5 12.5 0 0 0-.338 2.5H7.5V5zM8.5 5v2.5h2.99a12.5 12.5 0 0 0-.337-2.5zM4.51 8.5a12.5 12.5 0 0 0 .337 2.5H7.5V8.5zm3.99 0V11h2.653c.187-.765.306-1.608.338-2.5zM5.145 12q.208.58.468 1.068c.552 1.035 1.218 1.65 1.887 1.855V12zm.182 2.472a7 7 0 0 1-.597-.933A9.3 9.3 0 0 1 4.09 12H2.255a7 7 0 0 0 3.072 2.472M3.82 11a13.7 13.7 0 0 1-.312-2.5h-2.49c.062.89.291 1.733.656 2.5zm6.853 3.472A7 7 0 0 0 13.745 12H11.91a9.3 9.3 0 0 1-.64 1.539 7 7 0 0 1-.597.933M8.5 12v2.923c.67-.204 1.335-.82 1.887-1.855q.26-.487.468-1.068zm3.68-1h2.146c.365-.767.594-1.61.656-2.5h-2.49a13.7 13.7 0 0 1-.312 2.5m2.802-3.5a7 7 0 0 0-.656-2.5H12.18c.174.782.282 1.623.312 2.5zM11.27 2.461c.247.464.462.98.64 1.539h1.835a7 7 0 0 0-3.072-2.472c.218.284.418.598.597.933M10.855 4a8 8 0 0 0-.468-1.068C9.835 1.897 9.17 1.282 8.5 1.077V4z"
+              />
+            </svg>
+            Mercado Total
+          </p>
+          <p class="card-text fs-2">
+            US$ 1,59 trilhão
+          </p>
+        </div>
+      </div>
     </div>
+
+    <!-- CARDS BANCOS -->
+    <div class="d-flex mx-auto mb-4">
+      <!-- CARD 1 -->
+      <div class="card mx-4 card-bancos py-2" style="width: 35%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-substack"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M15 3.604H1v1.891h14v-1.89ZM1 7.208V16l7-3.926L15 16V7.208zM15 0H1v1.89h14z"
+              />
+            </svg>
+            Fear & Greed Index
+          </p>
+          <p class="card-text">
+            Indicador de sentimento do mercado:
+            <br />
+            Fear = investidores cautelosos | Greed = mercado otimista
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 2 -->
+      <div class="card mx-4 card-bancos py-2" style="width: 35%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-graph-up"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M0 0h1v15h15v1H0zm14.817 3.113a.5.5 0 0 1 .07.704l-4.5 5.5a.5.5 0 0 1-.74.037L7.06 6.767l-3.656 5.027a.5.5 0 0 1-.808-.588l4-5.5a.5.5 0 0 1 .758-.06l2.609 2.61 4.15-5.073a.5.5 0 0 1 .704-.07"
+              />
+            </svg>
+            Taxa Média de Compra
+          </p>
+          <p class="card-text">
+            Média de taxas cobradas pelas corretoras = 0,5% a 1,5% do valor da transação.
+          </p>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card mx-4 card-bancos py-2" style="width: 35%">
+        <div class="card-body">
+          <p class="card-title fw-bold">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-lightbulb"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13a.5.5 0 0 1 0 1 .5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1 0-1 .5.5 0 0 1 0-1 .5.5 0 0 1-.46-.302l-.761-1.77a2 2 0 0 0-.453-.618A5.98 5.98 0 0 1 2 6m6-5a5 5 0 0 0-3.479 8.592c.263.254.514.564.676.941L5.83 12h4.342l.632-1.467c.162-.377.413-.687.676-.941A5 5 0 0 0 8 1"
+              />
+            </svg>
+            O que é o <strong>BITCOIN</strong>?
+          </p>
+          <p class="card-text">
+            É uma moeda digital descentralizada que permite enviar e receber dinheiro pela
+            internet sem precisar de bancos ou governos como intermediários.
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SIMULAÇÃO DE COMPRA -->
+    <!-- VALOR -->
+    <div class="row m-3 align-items-stretch gap-5">
+      <div class="g-0 rounded-2 ms-2 col-md-4">
+        <div class="p-4 border rounded-2 h-100 card-simulacao d-flex flex-column">
+            <h5 class="p-3 text-sm-center" style="color: var(--branco-texto);">Simulação</h5>
+
+            <label for="exampleFormControlInput1" class="form-label">Digite o valor $</label>
+            <input
+              type="number"
+              class="form-control caixa-valor mb-auto"
+              id="exampleFormControlInput1"
+              placeholder="Digite o valor em R$"
+            />
+          <!-- PLATAFORMA -->
+            <label for="" class="form-label">Plataforma</label>
+            <select class="form-select caixa-valor mb-auto" aria-label="Default select example">
+              <option selected>Escolha a plataforma</option>
+              <option value="bradesco">Bradesco</option>
+              <option value="nubank">Nubank</option>
+              <option value="caixaEconomico">Caixa Econômica</option>
+              <option value="outro">outro...</option>
+            </select>
+          <!-- BOTÃO -->
+            <button class="btn form-control w-100 botao-calcular" style="background-color: var(--verde);" type="submit">
+              Calcular
+            </button>
+        </div>
+      </div>
+
+      <!-- Gráfico -->
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div class="col-md ms-2 rounded-2 grafico">
+            <h2>Gráfico de Preço do Bitcoin</h2>
+            <canvas id="bitcoinChart"></canvas>
+        </div>
+    </div>
+
+
+      <h3 class="texto-conhecimento text-sm-center">Bancos mais utilizados</h3>
+    <div class="progress-stacked" style="height: 3.125rem;">
+  <div class="progress" role="progressbar" aria-label="Segment one" aria-label="100px high" aria-valuemin="0" aria-valuemax="100" style="width: 15%; height: 3.125rem;">
+    <div class="progress-bar barra-bancos-mais-utilizados" style="background-image: linear-gradient(to left,#1A1A25, #2D3443);">Bradesco - 15%</div>
   </div>
-</nav>
+  <div class="progress progress-bradesco" role="progressbar" aria-label="Segment two" aria-label="100px high" aria-valuemin="0" aria-valuemax="100" style="width: 18%; height: 3.125rem;">
+    <div class="progress-bar barra-bancos-mais-utilizados" style="background-image: linear-gradient(to left,#1A1A25, #2D3443);">Nubank - 18%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Segment three" aria-label="100px high" aria-valuemin="0" aria-valuemax="100" style="width: 24%; height: 3.125rem;">
+    <div class="progress-bar barra-bancos-mais-utilizados" style="background-image: linear-gradient(to left,#1A1A25, #2D3443);">Caixa Econômica - 24%</div>
+  </div>
+  <div class="progress" role="progressbar" aria-label="Segment four" aria-label="100px high" aria-valuemin="0" aria-valuemax="100" style="width: 43%; height: 3.125rem;">
+    <div class="progress-bar barra-bancos-mais-utilizados" style="background-image: linear-gradient(to left,#1A1A25, #2D3443);">Outros bancos - 43%</div>
+  </div>
+</div>
 
+ <footer class="text-white text-center py-3 mt-5 rounded-2 mx-4 rodape">
+  <p class="mb-0">© Crypto 2026 - Todos os direitos reservados</p>
+</footer>
 
+<script src="dashboard.js"></script>
 
-    <div class="flex card-valorizacao">
-        <div class="card p-1 mx-5" style="width: auto;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    
-        <div class="card p-1 mx-5" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    
-    
-        <div class="card p-1 mx-5" style="width: 18rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    
-        <div class="card p-1 mx-5" style="width: auto;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    </div>
-
-    <!--parte-->
-
-     <div class="flex card-dois p-3">
-        <div class="card px-2" style="width: 37rem; height: 9rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    
-        <div class="card px-2" style="width: 37rem; height: 9rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-    
-    
-        <div class="card px-2" style="width: 37rem; height: 9rem;">
-            <img src="..." class="card-img-top" alt="...">
-            <div class="card-body">
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s
-                    content.</p>
-            </div>
-        </div>
-
-    
-
-
-
-        
-        
-
-</body>
-
+  </body>
 </html>

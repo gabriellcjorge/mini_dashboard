@@ -1,42 +1,180 @@
-:root {
-    --fundo: #0A0A0F;
-    --card-fundo: #12121A;
-    --cor-titulo: #FFFFFF;
-    --esmaecido: #9CA3AF;
-}
-
-
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+:root {
+    --preto-fundo: #0A0A0F;
+    --preto-claro-card: #12121A;
+    --branco-texto: #FFFFFF;
+    --verde: #00FF88;
+    --esmaecido: #9CA3AF;
+    --amarelo: #FACC15;
+    --cinza-fundo: #1A1A25;
+    --borda-cor: #2D3443;
 }
 
-.container-fluid {
-    background: var(--card-fundo);
+svg {
+    color: var(--verde);
+}
+
+body {
+    background-color: var(--preto-fundo);
+}
+
+.barra-navegacao{
+    background-color: var(--preto-claro-card);
+    border-bottom: 1px solid var(--borda-cor);
+}
+
+.barra-navegacao a {
+    color: var(--branco-texto);
+}
+
+.barra-navegacao a:hover {
+    color: var(--verde);
+}
+
+.nav-dashboard:hover {
+    border-bottom: 2px solid var(--verde);
+}
+
+.card-informacoes {
+    background-color: var(--preto-claro-card);
+    border: 1px solid var(--borda-cor);
+    color: var(--branco-texto);
+    transition: 0.3s;
+}
+
+.card-informacoes:hover {
+    box-shadow: 0 0 0.85rem var(--borda-cor);
+}
+
+.card-bancos {
+    background-color: var(--cinza-fundo);
+    border: 1px solid var(--borda-cor);
+    color: var(--branco-texto);
+}
+
+.card-text {
+    font-family: 'Nunito', serif;
+    color: var(--branco-texto);
+}
+
+canvas {
+  width: 100% !important;
+  height: 350px !important;
+}
+
+.grafico-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+}
+
+.card-title {
+    font-family: 'Noto Sans', serif;
+    color: var(--verde);
+}
+
+.grafico {
+    border: 1px solid var(--borda-cor);
+    color: var(--verde);
+    margin-right: 0.45rem;
+    background-color: var(--cinza-fundo);
+}
+
+.text-intro-bitcoin {
+    font-family: 'Noto Sans', serif;
+    color: var(--verde);
+    margin-left: 1.5rem;
     
 }
 
-.navbar-brand {
-    color: var(--cor-titulo);
+.text-desen-bitcoin {
+    font-family: 'Noto Sans', serif;
+    color: var(--branco-texto);
+    margin-left: 1.5rem;
+    margin-top: 0%;
+    
 }
 
+.progress-stacked {
+    background-color: var(--preto-claro-card);
+    border: 0.5px solid var(--borda-cor);
+    margin-left: 1.2%;
+    font-weight: bold;
+    width: 97.5%;
+    border: 1px solid var(--borda-cor);
+    font-family: 'nunito', serif;
 
-.flex {
-    display: flex;
 }
 
-.card-dois {
-  margin: 0 auto;
-  width: fit-content;
-  gap: 30px;
-  align-content: center ;
-  
+.texto-conhecimento {
+    font-family: 'Noto Sans', serif;
+    color: var(--branco-texto);
+    margin: 1.7rem;
+    font-weight: bold;
+    font-size: 1.7rem;
+}
+.container-body {
+    margin-top: 2rem;
+    max-width: 1750px;
 }
 
-.nav-link{
-    color: white;
+.card-bitcoin{
+    color: var(--branco);
 }
 
+.card-bitcoin small{
+    color: var(--esmaecido);
+}
 
+.card-simulacao label{
+    color: var(--esmaecido);
+}
+
+.caixa-valor {
+    background-color: var(--cinza-fundo);
+    color: var(--esmaecido);
+}
+
+.caixa-valor::placeholder {
+    color: var(--esmaecido);
+}
+
+.caixa-valor:focus {
+    
+    background-color: var(--cinza-fundo);
+    color: var(--verde)
+}
+
+.card-simulacao {
+    font-family: 'Noto Sans', serif;
+    background-color: var(--cinza-fundo);
+    border: 1px solid var(--borda-cor) !important;
+}
+
+.rodape {
+    
+    background-color: var(--cinza-fundo);
+    border-top: 1px solid var(--borda-cor);
+    border: 0.5px solid var(--borda-cor);
+}
+
+.botao-calcular {
+    transition: 0.5s;
+}
+
+.botao-calcular:hover {
+    box-shadow: 0 0 0.85rem var(--verde);
+    scale: 1.03;
+}
+.barra-bancos-mais-utilizados {
+    transition: 0.3s;
+}
+.barra-bancos-mais-utilizados:hover {
+    z-index: 1;
+    box-shadow: 0 0 0.75rem inset var(--branco-texto);
+}
